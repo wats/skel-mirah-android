@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Vuvuzela" default="help">
+<project name="Skel" default="help">
 
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked in in Version
@@ -70,17 +70,17 @@
       <exec executable="javac" dir="gen">
       	<arg value="-d"/>
       	<arg value="../bin/classes"/>
-      	<arg value="../gen/bastos/vuvuzela/R.java"/>
+      	<arg value="../gen/wats/skel/R.java"/>
       </exec>
-            
-       <exec executable="dubyc" dir="src">
-      	<env key="CLASSPATH" file="${android.jar}" />
-      	<arg value="-d" />
-      	<arg value="../bin/classes" />
-      	<arg value="-c"/>
-      	<arg value="../bin/classes" />
-      	<arg value="." />
-      </exec>
+          
+       <exec executable="mirahc" dir="src">
+        <env key="CLASSPATH" file="${android.jar}" />
+        <arg value="-d" />
+        <arg value="../bin/classes" />
+        <arg value="-c"/>
+        <arg value="../bin/classes:../gen" />
+        <arg value="." />
+       </exec>  
     </target>
         
 </project>

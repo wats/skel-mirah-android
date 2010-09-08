@@ -4,30 +4,30 @@ import "android.os.Bundle"
 import "android.view.View"
 import "android.widget.Button"
 import "android.widget.ImageView"
-import "bastos.vuvuzela.R"
+import "wats.skel.R"
 import "OnClickListener", "android.view.View$OnClickListener"
 import "android.util.Log"
 import "android.content.Context"
 
-class Vuvuzela < Activity
+class Skel < Activity
   
   def onCreate(savedInstanceState:Bundle)
     super(savedInstanceState)
     setContentView(R.layout.main);
     @context = getBaseContext()
-    vuvuzela = findViewById(R.id.ImageView01)
-    listener = VuvuzelaClickListener.new(@context)
-    vuvuzela.setOnClickListener(listener)
+    skel = findViewById(R.id.ImageView01)
+    listener = SkelClickListener.new(@context)
+    skel.setOnClickListener(listener)
   end
   
-  class VuvuzelaClickListener
+  class SkelClickListener
     implements OnClickListener
     def initialize(context:Context)
       @context = context
     end
     def onClick(view:View)
       Log.i("test", "Just a test")
-      mp = MediaPlayer.create(Context(@context), R.raw.vuvuzela);
+      mp = MediaPlayer.create(Context(@context), R.raw.skel);
       mp.start();
     end
   end
