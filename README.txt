@@ -1,4 +1,4 @@
-Vuvuzela Android
+Skel Android
 
 * Copy local.properties.example to local.properties
 * Use jruby
